@@ -16,8 +16,6 @@ class PlacesController < ApplicationController
     def create
         @place = Place.new
         @place["name"] = params["place"]["name"]
-        @place["description"] = params["place"]["description"]
-        @place["state"] = params["place"]["posted-on"]
         @place.save
         redirect_to "/places"
     end
